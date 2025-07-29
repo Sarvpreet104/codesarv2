@@ -3,6 +3,7 @@
 :root {
     --bg-color: #0E1A1A;
     --ele-bg-color: #1F2E2E;
+    --ele-bg-color-alt: #23413F;
     --primary-color: #E6E1D5;
     --secondary-color: #B8B3A7;
     --accent-color: #3EB489;
@@ -143,7 +144,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 1.3rem;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
 }
 
 .box-flex {
@@ -206,7 +207,43 @@ main {
 }
 
 
+.blog-box-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.blog-item {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    min-height: 250px;
+}
+
+.blog-item .thumbnail-box {
+    width: 40%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    border-radius: 30px 0 0 30px;
+}
+
+.blog-item .desc-box {
+    width: 60%;
+}
+
+.blog-item .desc-box a {
+    margin: auto 0 0 0;
+    align-self: flex-end;
+}
+
 @media screen and (max-width: 768px) {
+    .hero .video-box {
+        width: 100%;
+    }
+
     .box-flex {
         width: 90%;
     }
@@ -215,8 +252,5 @@ main {
         flex: 1 100%;
     }
 
-    .hero .video-box {
-        width: 100%;
-    }
 
 }
