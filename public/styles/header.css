@@ -60,16 +60,9 @@ header nav ul li {
 header nav ul li a {
     color: var(--accent-color);
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
     font-weight: 500;
     font-family: "Baloo 2", sans-serif;
     background-color: transparent;
-}
-
-header nav ul li a:hover {
-    color: var(--highlight-color);
-    background-color: transparent;
-    text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
