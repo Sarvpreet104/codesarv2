@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - codeSarv</title>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/contact.css">
+</head>
+
+<body>
+    <%- include('partials/header.ejs') %>
+
+        <main>
+            <h1 class="page-title">Contact - codeSarv</h1>
+
+            <section class="contact-section">
+
+                <div class="contact-box">
+
+                    <form action="/contact-me" method="post">
+                        <div class="contact-fields">
+                            <input type="text" placeholder="Your Name" name="name" required autofocus>
+                            <input type="email" placeholder="Your @Email" name="email" required>
+                            <textarea name="message" placeholder="Your Message"></textarea>
+
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+
+                    <div class="contact-info">
+                        <h2>Feel free to contact us.</h2>
+                        <p>If you have any:</p>
+                        <ul>
+                            <li>Problem</li>
+                            <li>Suggestion</li>
+                            <li>Query</li>
+                        </ul>
+                        <p>Then, fill the fields and you will get a response on your email-id ASAP.</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <%- include('partials/footer.ejs') %>
+</body>
+
+</html>

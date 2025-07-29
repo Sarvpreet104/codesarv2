@@ -254,13 +254,15 @@ main {
     padding: 1rem;
 }
 
-.content-box h1 {
+.content-box h1,
+.page-title {
     text-align: center;
     margin: 1.5rem 0;
 }
 
 .content-box h2 {
     margin: 1rem 0;
+    text-decoration: underline;
 }
 
 .content-box h3,
@@ -298,5 +300,7 @@ main {
         flex: 1 100%;
     }
 
-
+    .content-box {
+        width: 95%;
+    }
 }

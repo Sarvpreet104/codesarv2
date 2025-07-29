@@ -14,6 +14,10 @@ app.get('/about', (req, res) => {
     res.render('about.ejs');
 });
 
+app.get('/contact', (req, res) => {
+    res.render('contact.ejs')
+})
+
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });    

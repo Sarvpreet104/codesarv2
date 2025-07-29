@@ -1,0 +1,118 @@
+.contact-box {
+    width: 65%;
+    margin: 1rem auto;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    gap: 2rem;
+}
+
+.contact-box form {
+    width: 50%;
+}
+
+.contact-box .contact-fields {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .5rem;
+
+}
+
+.contact-fields input {
+    width: 100%;
+    border: 2px solid var(--borders-color);
+    outline: none;
+    padding: 10px 20px;
+    font-size: var(--fs-p);
+    border-radius: 9999px;
+    background-color: var(--ele-bg-color);
+    color: var(--primary-color);
+}
+
+.contact-fields textarea {
+    width: 100%;
+    height: 50%;
+    background-color: var(--ele-bg-color);
+    border-radius: 30px;
+    border: 2px solid var(--borders-color);
+    padding: 10px 20px;
+    color: var(--primary-color);
+    outline: none;
+    font-size: var(--fs-p);
+    resize: none;
+}
+
+.contact-box .contact-info {
+    width: 50%;
+    background-color: var(--ele-bg-color-alt);
+    border-radius: 30px;
+    padding: 1rem;
+}
+
+.contact-box .contact-info ul {
+    list-style-position: inside;
+    padding: .4rem 1rem;
+    color: var(--secondary-color);
+    font-size: var(--fs-p);
+    font-family: "Baloo 2", sans-serif;
+}
+
+.contact-box h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-box p {
+    margin-bottom: .4rem;
+}
+
+.contact-box button {
+    padding: 10px 15px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    margin: 1rem 0;
+
+    border: none;
+    outline: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    font-size: var(--fs-a);
+    font-weight: var(--fw-bold);
+}
+
+.contact-box button:hover {
+    background-color: var(--highlight-color);
+}
+
+@media screen and (max-width: 1040px) {
+    .contact-box {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .contact-box form {
+        width: 100%;
+    }
+
+    .contact-box .contact-fields textarea {
+        height: 200px;
+    }
+
+    .contact-box .contact-info {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .contact-box {
+        width: 100%;
+    }
+}
