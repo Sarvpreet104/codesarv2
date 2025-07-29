@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg-color: #0E1A1A;
+    --ele-bg-color: #1F2E2E;
+    --primary-color: #E6E1D5;
+    --secondary-color: #B8B3A7;
+    --accent-color: #3EB489;
+    --highlight-color: #56CBAF;
+    --borders-color: #2E3E3E;
+
+    /* Headings */
+    --fs-h1: clamp(2rem, 5vw + 1rem, 3.5rem);
+    --fs-h2: clamp(1.75rem, 4vw + 0.5rem, 3rem);
+    --fs-h3: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
+    --fs-h4: clamp(1.25rem, 2.5vw + 0.5rem, 1.75rem);
+
+    /* Body Text */
+    --fs-p: clamp(1rem, 1.5vw, 1.2rem);
+    --fs-a: clamp(1rem, 1.5vw, 1.2rem);
+    --fs-small: clamp(0.85rem, 1.2vw, 1rem);
+
+    /* Weights */
+    --fw-heading: 700;
+    --fw-subheading: 600;
+    --fw-normal: 400;
+    --fw-bold: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background-color: var(--bg-color);
+}
+
+::selection {
+    background-color: var(--highlight-color);
+    color: var(--ele-bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-heading);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-subheading);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+}
+
+small {
+    font-size: var(--fs-small);
+}
+
+p {
+    font-family: "Baloo 2", sans-serif;
+    color: var(--secondary-color);
+    font-size: var(--fs-p);
+    font-weight: var(--fw-normal);
+    line-height: 1.6;
+}
+
+.tagline p {
+    font-family: 'Fira Code', monospace;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: var(--fw-bold);
+}
+
+a {
+    font-family: "baloo 2", sans-serif;
+    color: var(--accent-color);
+    font-size: var(--fs-a);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+}
+
+section {
+    width: 100%;
+    height: max-content;
+    margin: 2.5rem 0;
+}
+
+/* main */
+main {
+    width: 100vw;
+    height: max-content;
+}
+
+/* hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+    text-align: center;
+
+    padding: 1rem;
+}
+
+.hero .video-box {
+    width: 65%;
+    overflow: hidden;
+    border-radius: 30px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-box video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 30px;
+    display: block;
+}
+
+/* blogs courses */
+.courses,
+.blogs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+    padding: 1.5rem 0;
+}
+
+.box-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    width: 65%;
+}
+
+
+.box-flex-item {
+    background-color: var(--ele-bg-color);
+    border: 2px solid var(--borders-color);
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    flex: 1 350px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.box-flex-item .thumbnail-box {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 30px 30px 0 0;
+    aspect-ratio: 3 / 2;
+}
+
+.thumbnail-box img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.box-flex-item .desc-box {
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.box-flex-item a {
+    margin: auto 1rem 1rem 1rem;
+    align-self: flex-start;
+    background-color: var(--accent-color);
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    color: var(--ele-bg-color);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.box-flex-item a:hover {
+    background-color: var(--highlight-color);
+}
+
+
+@media screen and (max-width: 768px) {
+    .box-flex {
+        width: 90%;
+    }
+
+    .box-flex-item {
+        flex: 1 100%;
+    }
+
+    .hero .video-box {
+        width: 100%;
+    }
+
+}
